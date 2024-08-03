@@ -1,0 +1,529 @@
+/* Background image styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+.bg_form {
+    background-image: url('../images/image17.png');
+    width: 100%;
+    height: 690px;
+    background-size: cover;
+    filter: brightness(.5);
+    margin-top: -125px;
+    position: relative;
+    z-index: 0;
+}
+
+.dest_head {
+    flex-direction: column;
+    line-height: 1.5cm;
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+}
+
+.des_logo {
+    color: #FFC700;
+}
+
+.dest_head h1 {
+    font-size: 55px;
+    font-weight: 900;
+    font-family: poppins;
+    color: #f1f1f1;
+}
+
+.dest_head button {
+    border-radius: 30px;
+    width: 250px;
+    height: 60px;
+    border: none;
+    background: linear-gradient(to top right, #ffffff65, #ffffff4f, #ffffff68);
+    font-size: 18px;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-family: poppins;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f1f1f1;
+    position: relative;
+}
+
+.dest_head button a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+    .bg_form {
+        height: 600px !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(0.8);
+    }
+
+
+    .dest_head {
+        text-align: center;
+    }
+
+    .dest_head h1 {
+        font-size: 32px !important;
+        width: 280px !important;
+        text-align: center;
+       
+    }
+
+    .dest_head button {
+        width: 100% !important;
+        height: 30px;
+        font-size: 15px;
+        position: absolute;
+        /* top: 180px; */
+        background-color: #f4b300b3;
+        right: 0;
+        bottom: 10px;
+        /* position: fixed; */
+
+    }
+
+    .dest_head button a {
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 475px) {
+    .dest_head h1 {
+        font-size: 35px;
+    }
+
+    .dest_head button {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .dest_head button a {
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 425px) {
+    .dest_head h1 {
+        font-size: 30px;
+    }
+
+    .dest_head button {
+        width: 160px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .dest_head button a {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .dest_head h1 {
+        font-size: 30px;
+    }
+
+    .dest_head button {
+        width: 160px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .dest_head button a {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .dest_head h1 {
+        font-size: 30px;
+    }
+
+    .dest_head button {
+        width: 160px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .dest_head button a {
+        line-height: 30px;
+    }
+}
+
+/* Responsive adjustments */
+
+
+.plan_button {
+    text-align: center;
+}
+
+.plan_button button {
+    font-size: 16px;
+}
+
+.plan_button img {
+    width: 25px;
+    height: auto;
+}
+
+/* Common styles for all section headings */
+.section-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Adjust as needed */
+}
+
+.form-section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    /* Space between title and icon */
+}
+
+.check-icon {
+    color: #009578;
+    font-size: 20px;
+}
+
+.form-section-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments if needed */
+
+.form-section {
+    margin-bottom: 30px;
+
+}
+
+.form-section1 {
+    margin: 100px !important;
+}
+
+.form-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.form-details {
+    width: 500px !important;
+
+}
+
+.form-control {
+    border: 1px solid #DAA520 !important;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: #DAA520;
+    color: #fff;
+}
+
+.calendar-day.selected {
+    background-color: #DAA520;
+    color: #fff;
+}
+
+.budget-slider {
+    width: 100%;
+}
+
+#budget-value {
+    font-size: 16px;
+    color: #D8B964;
+    border: 2px solid #D8B964;
+}
+
+.traveler-group {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.traveler-group:last-child {
+    margin-right: 0;
+}
+
+.traveler-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #D8B964;
+    border-radius: 0;
+}
+
+.btn-custom {
+    background-color: white;
+    color: #D8B964;
+    border: 1px solid #D8B964;
+    border-radius: 0;
+    font-size: 18px;
+    width: 40px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #D8B964;
+    color: white;
+}
+
+.plan_button {
+    display: flex;
+    justify-content: center;
+}
+
+.plan_button button {
+    width: 300px;
+    height: 40px;
+    border: 2px solid #D8B964;
+    border-radius: 2px;
+}
+
+.plan_button button img {
+    width: 45px;
+    height: 20px;
+    /* transform: matrix3d(1.1); */
+    /* transform: rotate3d(20); */
+}
+
+.calendar-container {
+    border: 2px solid #d4af37;
+    /* Golden border color */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    border: none;
+    background: none;
+    color: #d4af37;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calendar-header button:focus {
+    outline: none;
+}
+
+#calendar-month-year {
+    font-weight: bold;
+    color: #6a4517;
+    /* Darker brown color */
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* 7 columns for the days of the week */
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-day.selected {
+    background-color: #d4af37;
+    color: white;
+}
+
+.calendar-day.empty {
+    visibility: hidden;
+}
+
+.form_day {
+    width: 250px !important;
+}
+
+@media (max-width: 576px) {
+    .form-section1 {
+        margin: 50px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .det_text {
+        width: 380px;
+    }
+}
+
+@media (max-width: 425px) {
+    .form-section1 {
+        margin: 25px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .plan_button button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .form-section1 {
+        margin: 15px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .plan_button button {
+        width: 100%;
+    }
+
+    .det_text {
+        width: 280px;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-section1 {
+        margin: 10px !important;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 100% !important;
+    }
+
+    .plan_button button {
+        width: 100%;
+    }
+}
+
+/* Changing form direction for smaller screens */
+@media (max-width: 576px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        width: 100%;
+    }
+}

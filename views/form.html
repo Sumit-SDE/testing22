@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media-query.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.11/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section>
+        <div class="container-fluid bg_form">
+            <div class="container dest col-lg-12 ">
+                <div class=" dest_head">
+                    <h1 style="width:375px; color:#f1f1f1;">
+                        Explore the
+                        Destination
+                        with <span class="des_logo"> TRIPCIERGE!</span>
+                    </h1>
+
+                    <button class="btn fixed">
+                        <a href="./form.html" style="color: #edebe9; text-decoration: none;">Let's Plan Now</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="sec_1_form">
+            <div class="container ">
+                <form action="/send-email" method="POST">
+                    <!-- Your Details Section -->
+                    <div class="form-section form-section1 d-flex justify-content-around flex-column">
+                        <div class="d-md-flex align-items-center">
+                            <div class="form-section-title">Your Details</div>
+                            <div class="check-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="d-md-flex justify-content-around">
+                            <div class="form-row">
+                                <div class="form-group col-md-6 det_text">
+                                    <input type="text" class="form-control form-details" name="firstName"
+                                        placeholder="First Name" required>
+                                </div>
+                                <div class="form-group col-md-6 mt-2">
+                                    <input type="text" class="form-control form-details" name="lastName"
+                                        placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="form-row  ">
+                                <div class="form-group col-md-6 ">
+                                    <input type="tel" class="form-control form-details" name="phone" id="phone"
+                                        placeholder="Phone No." required>
+                                </div>
+                                <div class="form-group col-md-6 mt-2">
+                                    <input type="email" class="form-control form-details" name="email"
+                                        placeholder="E-Mail ID" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Destination Section -->
+                    <div class="form-section form-section1">
+                        <div class="form-section-title">Destination</div>
+                        <div class="check-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="form-group det_text">
+                            <input type="text" class="form-control" name="destination"
+                                placeholder="Interested Destination" required>
+                        </div>
+                    </div>
+
+                    <!-- Choose Dates Section -->
+                    <div class="form-section d-md-flex justify-content-around">
+                        <div class="form-row">
+                            <div class="form-section-title ">Choose Dates</div>
+                            <div class="form-group">
+                                <div class="calendar-container">
+                                    <div class="calendar-header">
+                                        <button type="button" class="btn btn-outline-secondary" id="prev-month"
+                                            onclick="prevMonth()">
+                                            <span>&#8249;</span>
+                                        </button>
+                                        <span id="calendar-month-year"></span>
+                                        <button type="button" class="btn btn-outline-secondary" id="next-month"
+                                            onclick="nextMonth()">
+                                            <span>&#8250;</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendar-days" id="calendar-days"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-5">
+                            <div class="form-group  ">
+                                <div class="form-row d-md-flex">
+                                    <div class="form-group col-md-6">
+                                        <input type="number" class="form-control form_day" name="days" id="days"
+                                            placeholder="Days">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="number" class="form-control form_day" name="nights" id="nights"
+                                            placeholder="Nights">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group  d-md-flex mt-5">
+                                <div>
+                                    <label for="adults">Adults (Age 18+)</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary" type="button"
+                                                onclick="changeValue('adults', -1)">-</button>
+                                        </div>
+                                        <input type="text" class="form-control" name="adults" id="adults" value="0">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button"
+                                                onclick="changeValue('adults', 1)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="children">Children (Age 0-18)</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary" type="button"
+                                                onclick="changeValue('children', -1)">-</button>
+                                        </div>
+                                        <input type="text" class="form-control" name="children" id="children" value="0">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button"
+                                                onclick="changeValue('children', 1)">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="form-group col-12">
+                                    <label for="budget">Budget Per Person</label>
+                                    <div class="d-flex align-items-center d-flex flex-column">
+                                        <input type="range" class="custom-range budget-slider" min="5000" max="100000"
+                                        value="5000"   name="budget" id="budget" oninput="updateBudgetValue(this.value)">
+                                        <input type="number" class="form-control ml-3" name="budget-value"
+                                            id="budget-value" min="5000" max="100000" value="5000"
+                                            oninput="updateBudgetSlider(this.value)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information Section -->
+                    <div class="form-section form-section1">
+                        <div class="form-section-title">Tell Us More About Your Trip</div>
+                        <div class="form-group det_text">
+                            <textarea class="form-control" name="additionalInfo" rows="5"
+                                placeholder="Your message..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group  plan_button ">
+                        <button type="submit" class="d-flex justify-content-between align-items-center">
+                            <div><img src="/images/plane.png" alt="" srcset="">
+                                <span style="margin-left: 80px;">Let's Go </span>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/loadContent.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</body>
+
+</html>
