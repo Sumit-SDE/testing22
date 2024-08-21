@@ -1,23 +1,102 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Load header and footer
+    // loadHTML('header-placeholder', '/header.html');
+    // loadHTML('footer-placeholder', '/footer.html');
+
+    // Phone number validation
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', () => validatePhoneNumber(phoneInput));
+    }
+
+    // Budget slider
+    const budgetSlider = document.getElementById('budget');
+    const budgetValue = document.getElementById('budget-value');
+
+    if (budgetSlider) {
+        updateSliderBackground(budgetSlider.value);
+        budgetSlider.addEventListener('input', () => updateBudgetValue(budgetSlider.value));
+    }
+
+    if (budgetValue) {
+        budgetValue.addEventListener('input', () => updateBudgetSlider(budgetValue.value));
+    }
+
+    // Calendar rendering
+    renderCalendar(currentMonth, currentYear);
+
+    // Increment and decrement buttons
+    document.querySelectorAll('.increment-btn').forEach(button => {
+        button.addEventListener('click', () => changeValue(button.dataset.inputId, 1));
+    });
+
+    document.querySelectorAll('.decrement-btn').forEach(button => {
+        button.addEventListener('click', () => changeValue(button.dataset.inputId, -1));
+    });
+});
+
 function loadHTML(elementId, filePath) {
     fetch(filePath)
         .then(response => response.text())
         .then(data => {
-            document.getElementById(elementId).innerHTML = data;
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = data;
+            }
         })
         .catch(error => console.error('Error loading HTML:', error));
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadHTML('header-placeholder', '/header.html');
-    loadHTML('footer-placeholder', '/footer.html');
-});
+function validatePhoneNumber(input) {
+    input.value = input.value.replace(/[^0-9+]/g, '');
 
-// phone number
-document.getElementById('phone').addEventListener('input', function (e) {
-    this.value = this.value.replace(/[^0-9+]/g, '');
-});
+    if (input.value.includes('+')) {
+        input.value = '+' + input.value.replace(/\+/g, '');
+    }
+    if (input.value.length > 13) {
+        input.value = input.value.slice(0, 13);
+    }
 
-// calender 
+    let digitCount = input.value.replace(/[^0-9]/g, '').length;
+    if (digitCount > 12) {
+        input.value = (input.value.includes('+') ? '+' : '') + input.value.replace(/[^0-9]/g, '').slice(0, 12);
+    }
+}
+
+function updateBudgetValue(value) {
+    const budgetValue = document.getElementById('budget-value');
+    if (budgetValue) {
+        budgetValue.value = value;
+    }
+    updateSliderBackground(value);
+}
+
+function updateBudgetSlider(value) {
+    const budgetSlider = document.getElementById('budget');
+    if (budgetSlider && value >= 5000 && value <= 100000) {
+        budgetSlider.value = value;
+    }
+    updateSliderBackground(value);
+}
+
+function updateSliderBackground(value) {
+    const budgetSlider = document.getElementById('budget');
+    if (budgetSlider) {
+        const min = budgetSlider.min;
+        const max = budgetSlider.max;
+        const percentage = ((value - min) / (max - min)) * 100;
+        budgetSlider.style.background = `linear-gradient(to right, #D6B957 ${percentage}%, #ddd ${percentage}%)`;
+    }
+}
+
+function changeValue(id, delta) {
+    const input = document.getElementById(id);
+    if (input) {
+        input.value = Math.max(0, parseInt(input.value) + delta);
+    }
+}
+
+// Calendar functions
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 let selectedStartDate = null;
@@ -25,20 +104,29 @@ let selectedEndDate = null;
 
 function renderCalendar(month, year) {
     const calendarDays = document.getElementById('calendar-days');
+    const monthYear = document.getElementById('calendar-month-year');
+    if (!calendarDays || !monthYear) return;
+
     calendarDays.innerHTML = '';
 
-    const monthYear = document.getElementById('calendar-month-year');
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const shortMonthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    
     monthYear.textContent = `${monthNames[month]} ${year}`;
 
-    const prevMonthButton = document.getElementById('prev-month');
-    const nextMonthButton = document.getElementById('next-month');
-
-    prevMonthButton.textContent = `${monthNames[(month + 11) % 12]} `;
-    nextMonthButton.textContent = `${monthNames[(month + 1) % 12]} `;
+    document.getElementById('prev-month').textContent = `${shortMonthNames[(month + 11) % 12]}`;
+    document.getElementById('next-month').textContent = `${shortMonthNames[(month + 1) % 12]} `;
 
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    const weekdayNames = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+    weekdayNames.forEach(day => {
+        const weekdayCell = document.createElement('div');
+        weekdayCell.textContent = day;
+        weekdayCell.classList.add('calendar-day', 'weekday');
+        calendarDays.appendChild(weekdayCell);
+    });
 
     for (let i = 0; i < firstDay; i++) {
         const emptyCell = document.createElement('div');
@@ -56,7 +144,7 @@ function renderCalendar(month, year) {
 
     updateCalendarSelection();
 }
-// 
+
 function selectDay(dayCell, date) {
     if (!selectedStartDate || selectedEndDate) {
         selectedStartDate = date;
@@ -116,27 +204,3 @@ function nextYear() {
     currentYear++;
     renderCalendar(currentMonth, currentYear);
 }
-
-function changeValue(id, delta) {
-    const input = document.getElementById(id);
-    const newValue = Math.max(0, parseInt(input.value) + delta);
-    input.value = newValue;
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderCalendar(currentMonth, currentYear);
-});
-    
-// buget sscript 
-function updateBudgetValue(value) {
-    const budgetValue = document.getElementById('budget-value');
-    budgetValue.value = value;
-}
-
-function updateBudgetSlider(value) {
-    const budgetSlider = document.getElementById('budget');
-    if (value >= 5000 && value <= 100000) {
-        budgetSlider.value = value;
-    }
-}
-

@@ -92,13 +92,15 @@
     }
 
     .dest_head button {
-        width: 100% !important;
+        width: 80% !important;
         height: 30px;
         font-size: 15px;
-        position: absolute;
+        position:fixed ;
         /* top: 180px; */
         background-color: #f4b300b3;
-        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         bottom: 10px;
         /* position: fixed; */
 
@@ -131,7 +133,7 @@
     }
 
     .dest_head button {
-        width: 160px;
+        width: 160px;   
         height: 40px;
         font-size: 13px;
     }
@@ -173,23 +175,8 @@
     }
 }
 
-/* Responsive adjustments */
-
-
-.plan_button {
-    text-align: center;
-}
-
-.plan_button button {
-    font-size: 16px;
-}
-
-.plan_button img {
-    width: 25px;
-    height: auto;
-}
-
 /* Common styles for all section headings */
+/* General styles */
 .section-heading {
     display: flex;
     align-items: center;
@@ -201,7 +188,14 @@
     font-size: 18px;
     font-weight: bold;
     margin-right: 10px;
-    /* Space between title and icon */
+    color: #643600;
+    font-family: poppins;
+}
+
+.frm_sub_titile {
+    color: #643600;
+    font-weight: bold;
+    font-family: poppins;
 }
 
 .check-icon {
@@ -209,18 +203,17 @@
     font-size: 20px;
 }
 
-.form-section-title {
-    font-size: 18px;
-    font-weight: bold;
+.form_day:focus,
+.form_day1:focus,
+.frm_adults:focus,
+.frm_adults1:focus,
+.budget-slider:focus,
+#budget-value:focus {
+    border: 1px solid #643600; /* Border color on focus */
+    background-color: transparent; /* No background color change */
 }
 
-/* Responsive adjustments if needed */
-
-.form-section {
-    margin-bottom: 30px;
-
-}
-
+/* Base styles */
 .form-section1 {
     margin: 100px !important;
 }
@@ -232,62 +225,65 @@
 
 .form-details {
     width: 500px !important;
-
+    height: 50px;
 }
-
+.frm_desti{
+    height: 50px !important;
+}
 .form-control {
-    border: 1px solid #DAA520 !important;
-}
+    border: 1px solid #FFC700 !important;
 
-.calendar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding: 0 10px;
-    margin-bottom: 10px;
-}
-
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-
-.calendar-day {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.calendar-day:hover {
-    background-color: #DAA520;
-    color: #fff;
-}
-
-.calendar-day.selected {
-    background-color: #DAA520;
-    color: #fff;
 }
 
 .budget-slider {
     width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #D6B957 0%, #D6B957 0%, #ddd 0%, #ddd 100%);
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 10px;
+    border: none;
 }
+
+.budget-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #D6B957;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.budget-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #D6B957;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none; /* Ensures no border on the thumb */
+}
+
+.budget-slider::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #D6B957;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none; /* Ensures no border on the thumb */
+}
+
 
 #budget-value {
     font-size: 16px;
     color: #D8B964;
-    border: 2px solid #D8B964;
+    /* border: 2px solid #D8B964; */
+    margin-top: 30px !important;
+    /* background: #6a4517; */
+    border: none;
 }
 
 .traveler-group {
@@ -331,25 +327,30 @@
 }
 
 .plan_button button {
-    width: 300px;
+    width: 350px;
     height: 40px;
     border: 2px solid #D8B964;
     border-radius: 2px;
 }
-
+.plan_button button div span{
+    font-size: 22px ;
+    font-weight: bold;
+    font-family: poppins;
+    color: #6a4517;
+    margin-left: 70px
+    /* text-align: center !important; */
+}
 .plan_button button img {
     width: 45px;
     height: 20px;
-    /* transform: matrix3d(1.1); */
-    /* transform: rotate3d(20); */
+    margin-left: 10px;
 }
 
 .calendar-container {
-    border: 2px solid #d4af37;
-    /* Golden border color */
     border-radius: 5px;
     padding: 10px;
     text-align: center;
+    width: 370px !important;
 }
 
 .calendar-header {
@@ -357,6 +358,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    border: 1px solid #FFC700;
+    width: 360px !important;
+    height: 50px;
+    border-radius: 10px;
 }
 
 .calendar-header button {
@@ -374,40 +379,211 @@
 #calendar-month-year {
     font-weight: bold;
     color: #6a4517;
-    /* Darker brown color */
 }
 
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* 7 columns for the days of the week */
-    gap: 5px;
+    gap: 5px; /* Adjust the gap between days */
 }
 
 .calendar-day {
-    padding: 10px;
-    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
 }
 
 .calendar-day.selected {
+    opacity: 1;
     background-color: #d4af37;
-    color: white;
+    color: #ffffff;
 }
 
 .calendar-day.empty {
     visibility: hidden;
 }
 
-.form_day {
-    width: 250px !important;
+.frm_adultsmain {
+    border: 1px solid #FFC700;
+    border-radius: 5px;
+    width: 265px !important;
+
+
+}
+.frm_adultsmain button{
+    font-size: 25px;
+    /* font-weight: bold; */
+    font-family: poppins;
+
+}
+.frm_adultsmain1 {
+    margin-left: 25px;
 }
 
+.frm_adults {
+    border: none !important;
+    text-align: center !important;
+    border-radius: 15px !important;
+    
+}
+
+.form_day {
+    width: 265px !important;
+    height: 50px;
+}
+
+.frm_desti{
+    /* width: 100%; */
+}
+.frm_days {
+    margin-top: 6px;
+}
+
+.form_day1 {
+    margin-left: 10px;
+}
+
+.frm_profile {
+    width: 596px !important;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* 576px and below */
 @media (max-width: 576px) {
     .form-section1 {
         margin: 50px !important;
     }
 
+    .form-section-title {
+        font-size: 1rem;
+    }
+
+    .form-details {
+        width: 100% !important;
+    }
+
+    .calendar-container {
+        width: 100% !important;
+    }
+
+    .calendar-header {
+        width: 100% !important;
+    }
+    .calendar-days {
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+}
+
+/* 430px and below */
+@media (max-width: 430px) {
+    .form_day {
+        width: 250px !important;
+    }
+
+    .frm_profile {
+        width: 100% !important;
+    }
+    .calendar-days {
+        gap: 8px; /* Further reduced gap */
+    }
+}
+
+/* 425px and below */
+@media (max-width: 425px) {
+    .form_day {
+        width: 240px !important;
+    }
+
+    .plan_button button {
+        width: 250px;
+        height: 35px;
+    }
+    .calendar-days {
+        gap: 6px; /* More reduction */
+    }
+}
+
+/* 420px and below */
+@media (max-width: 420px) {
+    .calendar-container {
+        width: 100% !important;
+    }
+
+    .calendar-header {
+        width: 100% !important;
+    }
+
+    .form_day {
+        width: 320px !important;
+    }
+
+    .btn-custom {
+        font-size: 16px;
+        width: 35px;
+        height: 30px;
+    }
+    .calendar-days {
+        gap: 5px; /* Slightly smaller gap */
+    }
+}
+
+/* 375px and below */
+@media (max-width: 375px) {
+    .form_day {
+        width: 200px !important;
+    }
+
+    .plan_button button {
+        width: 220px;
+        height: 30px;
+    }
+    .calendar-days {
+        gap: 4px; /* Minimum gap for very small screens */
+    }
+    .btn-custom {
+        font-size: 14px;
+        width: 30px;
+        height: 25px;
+    }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+    .form_day {
+        width: 180px !important;
+    }
+
+    .plan_button button {
+        width: 200px;
+        height: 30px;
+    }
+    .calendar-days {
+        gap: 3px; /* Smallest gap for the smallest screens */
+    }
+    .btn-custom {
+        font-size: 12px;
+        width: 25px;
+        height: 20px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .form-section1 {
+        margin: 50px !important;
+    }
+    .frm_profile{
+        width: 300px !important;
+    }
     .form-details {
         width: 100% !important;
     }

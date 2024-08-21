@@ -5,16 +5,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./server.js"
-
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "\"# testing22\"",
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "nodemailer": "^6.9.14",
-    "nodemon": "^3.1.4",
     "path": "^0.12.7"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
