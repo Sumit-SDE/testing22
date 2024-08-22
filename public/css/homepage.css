@@ -14,6 +14,9 @@
     position: relative;
     z-index: 2;
 }
+.navbar-brand img {
+    width:162px;
+}
 
 .nav-bg {
     background-color: transparent;
@@ -21,7 +24,7 @@
 }
 
 .navbar-toggler {
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .navbar-toggler-icon {
@@ -58,13 +61,19 @@
 
 .banner_icon .b_icon {
     font-size: 18px;
-   
-    background-color: #03030350; /* Background color with transparency */
-    border-radius: 50%; /* 50% of width/height to make it circular */
-    padding: 3px; /* Optional: Padding to control spacing inside the container */
-    display: inline-flex; /* Ensures the container fits the content and aligns items */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
+
+    background-color: #03030350;
+    /* Background color with transparency */
+    border-radius: 50%;
+    /* 50% of width/height to make it circular */
+    padding: 3px;
+    /* Optional: Padding to control spacing inside the container */
+    display: inline-flex;
+    /* Ensures the container fits the content and aligns items */
+    align-items: center;
+    /* Centers content vertically */
+    justify-content: center;
+    /* Centers content horizontally */
 }
 
 .banner_icon img {
@@ -108,13 +117,35 @@
     margin-top: -220px;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    background: linear-gradient(to bottom, white, transparent); /* Define your gradient colors */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent */
-    background-clip: text; /* For Firefox support */
-    text-fill-color: transparent; /* For Firefox support */
+    background: linear-gradient(to bottom, white, transparent);
+    /* Define your gradient colors */
+    -webkit-background-clip: text;
+    /* Clip the background to the text */
+    -webkit-text-fill-color: transparent;
+    /* Make the text color transparent */
+    background-clip: text;
+    /* For Firefox support */
+    text-fill-color: transparent;
+    /* For Firefox support */
 }
 
+.carousel-caption h2 {
+    margin-left: -135px !important;
+    font-size: 185px;
+    margin-top: -220px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    background: linear-gradient(to bottom, white, transparent);
+    /* Define your gradient colors */
+    -webkit-background-clip: text;
+    /* Clip the background to the text */
+    -webkit-text-fill-color: transparent;
+    /* Make the text color transparent */
+    background-clip: text;
+    /* For Firefox support */
+    text-fill-color: transparent;
+    /* For Firefox support */
+}
 
 .carousel-caption button {
     border-radius: 30px;
@@ -125,31 +156,36 @@
     color: #edebe9;
     font-weight: bold;
     font-family: poppins;
-} 
+}
 
 .btn.btn-primary {
     width: max-content;
-    color: rgb(255, 255, 255); /* Text color */
-    padding: 10px 20px; /* Button padding */
+    color: rgb(255, 255, 255);
+    /* Text color */
+    padding: 10px 20px;
+    /* Button padding */
     border-radius: 25px;
     border: 2px solid #9c9c9c40;
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 300;
-    cursor: pointer; 
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-    backdrop-filter: blur(3px); 
-    background-color: transparent;/* Blurs the background */
-    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
+    backdrop-filter: blur(3px);
+    background-color: transparent;
+    /* Blurs the background */
+
 }
 
 .btn.btn-primary:hover {
     backdrop-filter: blur(8px);
     background-color: #f1f1f120;
-   
+
 }
+
 .btn.btn-primary {
-   display: none;
-    
+    display: none;
+
 }
 
 
@@ -172,15 +208,24 @@
     opacity: .5;
     transition: opacity .6s ease;
 }
+
 .container.facebook {
-    height: 50px; /* Ensure height and width are equal */
-    width: 50px;  /* Adjust size as needed */
-    background-color: #03030350; /* Background color with transparency */
-    border-radius: 50%; /* 50% of width/height to make it circular */
-    padding: 6px; /* Optional: Padding to control spacing inside the container */
-    display: inline-flex; /* Ensures the container fits the content and aligns items */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
+    height: 50px;
+    /* Ensure height and width are equal */
+    width: 50px;
+    /* Adjust size as needed */
+    background-color: #03030350;
+    /* Background color with transparency */
+    border-radius: 50%;
+    /* 50% of width/height to make it circular */
+    padding: 6px;
+    /* Optional: Padding to control spacing inside the container */
+    display: inline-flex;
+    /* Ensures the container fits the content and aligns items */
+    align-items: center;
+    /* Centers content vertically */
+    justify-content: center;
+    /* Centers content horizontally */
 }
 
 
@@ -230,7 +275,8 @@
         height: 50px;
         font-size: 14px;
     }
-    .carousel-item img{
+
+    .carousel-item img {
         height: 955px !important;
         width: 100% !important;
         mix-blend-mode: overlay;
@@ -240,18 +286,27 @@
 
     .carousel-caption {
         display: flex !important;
-        color: white !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        color: #ffffff !important;
         height: auto;
         bottom: 400px;
         padding: 10px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column !important;
+        
+       
     }
 
     .carousel-caption h1 {
         background-color: white !important;
         font-size: 80px;
+        /* margin-top: 50px !important; */
+    }
+
+    .carousel-caption h2 {
+        background-color: white !important;
+        font-size: 55px !important;
         /* margin-top: 50px !important; */
     }
 
@@ -277,11 +332,11 @@
         display: none;
     }
 
-    .banner_icon{
+    .banner_icon {
         display: none !important;
     }
 
-    
+
 
 }
 
@@ -324,16 +379,18 @@
     color: #643600;
     font-weight: 900;
 }
-.sec-2-con h1{
+
+.sec-2-con h1 {
     font-size: 2.5em;
     position: relative;
     font-weight: 700;
-   
+
 }
+
 .sec-2-dec {
     font-size: 1rem;
     font-family: poppins;
-   
+
 }
 
 .sec-2-con {
@@ -341,10 +398,12 @@
     position: relative;
     z-index: 1;
 }
-.mobileViewImg{
+
+.mobileViewImg {
     display: none;
 }
-.knowMoreButton-container{
+
+.knowMoreButton-container {
     display: none;
 }
 
@@ -354,30 +413,36 @@
 /* Responsive adjustments for screens with max-width 576px */
 @media (max-width: 576px) {
     .sec-2-con {
-       
+
         margin: 0px !important;
     }
+
     .image-container {
         margin-top: 0px !important;
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .mobileViewImg{
-        
+
+    .mobileViewImg {
+
         display: flex;
         overflow: hidden;
         justify-content: center;
         height: 400px;
         width: 100%;
     }
+
     .mobileViewImg img {
-       
-        width: 100%; /* Ensure the image takes full width of the container */
-        height: 100%; /* Maintain aspect ratio */
+
+        width: 100%;
+        /* Ensure the image takes full width of the container */
+        height: 100%;
+        /* Maintain aspect ratio */
         object-fit: contain;
     }
-    .knowMoreButton-container{
+
+    .knowMoreButton-container {
         padding-top: 40px;
         display: flex;
         overflow: hidden;
@@ -385,19 +450,22 @@
         height: auto;
         width: 100%;
     }
-    .knowMoreButton-container img{
-        width: 100%; /* Ensure the image takes full width of the container */
-        height: auto; /* Maintain aspect ratio */
+
+    .knowMoreButton-container img {
+        width: 100%;
+        /* Ensure the image takes full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
         object-fit: contain;
     }
-    
+
     .about-text {
         margin-top: -120px;
         padding: 1.5rem;
     }
 
     .about-text h1 {
-       display: none;
+        display: none;
     }
 
     .sec-2-dec {
@@ -408,15 +476,15 @@
     }
 
     .sec-2-con h1 {
-       display: none;
+        display: none;
     }
 
     .sec-img-1 {
-       display: none;
+        display: none;
     }
 
     .image-overlay img {
-       display: none;
+        display: none;
     }
 
     .row {
@@ -432,23 +500,27 @@
 
     .btn.btn-primary1 {
         width: max-content;
-        color: rgb(255, 255, 255); /* Text color */
-        padding: 10px 20px; /* Button padding */
+        color: rgb(255, 255, 255);
+        /* Text color */
+        padding: 10px 20px;
+        /* Button padding */
         border-radius: 25px;
         border: 2px solid #9c9c9c40;
-        font-size: 16px; 
+        font-size: 16px;
         font-weight: 300;
-        cursor: pointer; 
+        cursor: pointer;
         background-color: rgb(255, 162, 0);
-        transition: background-color 0.3s ease; /* Smooth transition for background color */
-        backdrop-filter: blur(3px);     
+        transition: background-color 0.3s ease;
+        /* Smooth transition for background color */
+        backdrop-filter: blur(3px);
     }
 }
 
 .sec-3 {
-   
+
     margin-top: -80px !important;
 }
+
 .card-i-1 {
     font-size: 18px;
     border: 4px solid #643600;
@@ -458,6 +530,7 @@
     margin-top: 30px;
 
 }
+
 .card-i-2 {
     font-size: 18px;
     border: 4px solid #643600;
@@ -473,6 +546,7 @@
     color: #f1f1f1;
     cursor: pointer;
 }
+
 .card-i-2:hover {
     background-color: #643600;
     color: #f1f1f1;
@@ -480,7 +554,7 @@
 }
 
 .card__article {
-    
+
     position: relative;
     overflow: hidden;
     display: flex;
@@ -490,7 +564,7 @@
 
 .des-slider {
     height: 100vh;
-   
+
 }
 
 .sec-3-dec h1 {
@@ -550,7 +624,7 @@
 .card__container {
     display: grid;
     row-gap: 3.5rem;
-    
+
 }
 
 .card__description {
@@ -630,7 +704,7 @@
     100% {
         transform: translateY(5rem);
         /* bottom: -20rem; */
-        
+
 
     }
 }
@@ -710,7 +784,8 @@
         opacity: 1;
     }
 
-    .card-i-1,.card-i-2 {
+    .card-i-1,
+    .card-i-2 {
         display: none;
     }
 
@@ -731,7 +806,7 @@
 
         100% {
             transform: translateY(14rem);
-             /* bottom: -20rem;  */
+            /* bottom: -20rem;  */
 
         }
     }
@@ -739,13 +814,15 @@
 
 /* Default styles */
 .image-container img {
-    
+
     height: 460px;
 }
+
 .image-sec-why1 {
-   margin-top: -30px !important;
-   
+    margin-top: -30px !important;
+
 }
+
 .image-sec-why {
     height: 300px !important;
     z-index: 1;
@@ -771,7 +848,8 @@
     line-height: 5rem;
     color: #643600;
 }
-.homePage22-container{
+
+.homePage22-container {
     display: none;
 }
 
@@ -781,7 +859,8 @@
         padding-left: 1.5rem;
         margin-top: 750px !important;
     }
-    .homePage22-container{
+
+    .homePage22-container {
         margin-top: 80px;
         display: flex;
         overflow: hidden;
@@ -789,25 +868,29 @@
         height: auto;
         width: 100%;
     }
-    .homePage22-container img{
-        width: 100%; /* Ensure the image takes full width of the container */
-        height: auto; /* Maintain aspect ratio */
+
+    .homePage22-container img {
+        width: 100%;
+        /* Ensure the image takes full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
         object-fit: contain;
     }
 
     .image-sec-why1 {
-       display: none;
+        display: none;
     }
 
     .image-sec-why {
-       display: none;
+        display: none;
     }
 
     .sec-4-des h1 {
-       
+
         display: none !important;
     }
-    .text-center{
+
+    .text-center {
         display: none;
     }
 
@@ -816,7 +899,7 @@
         line-height: 1.5rem;
         margin-top: 10px;
         text-align: center;
-        
+
     }
 
     .sec-4-des {
@@ -880,28 +963,40 @@
     position: relative;
     background-color: black;
     display: flex;
-    width: 300%; /* 100% per slide, times 3 slides */
-    height: 500px; /* Adjust based on your image height */
-    animation: slide 28s linear infinite; /* Continuous animation */
-   
-    
+    width: 300%;
+    /* 100% per slide, times 3 slides */
+    height: 500px;
+    /* Adjust based on your image height */
+    animation: slide 28s linear infinite;
+    /* Continuous animation */
+
+
 }
 
 .carousel-item22 {
-    flex: 0 0 400px; /* Each item takes up 100% of the container */
+    flex: 0 0 400px;
+    /* Each item takes up 100% of the container */
     background-color: #00000080;
 }
 
 .carousel-item22 img {
-    width: 100%; /* Ensure images cover the container width */
-    height: 100%; /* Ensure images cover the container height */
-    object-fit: cover; /* Ensure images cover the container without distortion */
+    width: 100%;
+    /* Ensure images cover the container width */
+    height: 100%;
+    /* Ensure images cover the container height */
+    object-fit: cover;
+    /* Ensure images cover the container without distortion */
     opacity: .2;
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-30%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
 }
 
 
@@ -912,18 +1007,20 @@
     height: 90px;
     background-color: #ffffff;
     border-radius: 60% / 60%;
-    transform: translateX(-5%); /* Center horizontally */
+    transform: translateX(-5%);
+    /* Center horizontally */
 }
 
 
 .right-container {
     top: -40px;
     left: 0;
-    
+
 }
+
 .bottom-right-container {
     top: 450px;
-    left: 0;  
+    left: 0;
 }
 
 .carousel22 h2 {
@@ -945,7 +1042,7 @@
 .carousel22 button {
     color: #ffffff;
     background-color: #f1f1f120;
-    backdrop-filter: blur(7px); 
+    backdrop-filter: blur(7px);
     position: relative;
     bottom: 210px;
     border: 2px solid #9c9c9c40;
@@ -1022,7 +1119,7 @@
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-       
+
     }
 
     .carousel22 button {
@@ -1034,7 +1131,7 @@
 
 /* section-6 */
 .sec-6 {
-   
+
     /* color: #643600; */
 }
 
@@ -1073,7 +1170,7 @@
 }
 
 .test_image img {
-   justify-content: center !important;
+    justify-content: center !important;
     width: 100px;
     height: 100px !important;
     object-fit: cover !important;
@@ -1100,16 +1197,20 @@
 .custom-next {
     width: 30px;
     height: 30px;
-    background:#643600; 
+    background: #643600;
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .custom-prev:hover,
 .custom-next:hover {
-    background: #643600; /* Background color on hover */
-    color: white; /* Text color on hover */
+    background: #643600;
+    /* Background color on hover */
+    color: white;
+    /* Text color on hover */
 }
+
 .custom-bottom button {
     width: 30px !important;
     height: 3px;
@@ -1141,11 +1242,12 @@
         width: 120px;
         height: 120px;
     }
+
     .custom-prev {
         left: 10px;
-        bottom: -70px !important; 
+        bottom: -70px !important;
     }
-    
+
     .custom-next {
         right: 10px;
         top: 40px;
@@ -1181,23 +1283,28 @@
         max-width: 350px !important;
         height: 400px;
     }
-    .test_image img{
+
+    .test_image img {
         width: 80px !important;
         height: 80px !important;
     }
+
     .testimonial-text {
         font-size: 12px !important;
     }
 }
+
 @media (max-width: 375px) {
     .custom-carousel {
         max-width: 350px !important;
         height: 400px !important;
     }
+
     .test_image {
         top: 80px !important;
     }
-    .test_image img{
+
+    .test_image img {
         width: 30px !important;
         height: 30px !important;
     }
@@ -1214,10 +1321,11 @@
     }
 
     .test_image {
-     
+
         top: 10px !important;
     }
-    .test_image img{
+
+    .test_image img {
         width: 60px !important;
         height: 60px !important;
     }
@@ -1225,15 +1333,17 @@
     .testimonial-text {
         font-size: 10px !important;
     }
+
     .custom-prev {
         left: 10px;
     }
 
     .custom-next {
         right: 10px;
-      
+
     }
 }
+
 .bg-contact {
     background-image: url('../images/Rectangle81.png');
     height: 400px;
