@@ -182,6 +182,11 @@ h4 {
     opacity: 1; /* Ensure full opacity */
 }
 
+/* Targeting the text color for the input fields within the given structure */
+.form-row.d-md-flex.mt-2.justify-content-evenly .form-group1.contact_txt1 .form-control {
+    color: white; /* Replace with your desired text color */
+}
+
 
 /* Base styles for larger screens */
 .form-section {
@@ -199,6 +204,11 @@ h4 {
 .form-section.form-section1 .form-group.contact_txt .form-control::placeholder {
     color: #FFFFFF55; /* Replace with your desired color */
     opacity: 1; /* Ensure full opacity */
+}
+
+/* Targeting the text color for the textarea within the given structure */
+.form-section.form-section1 .form-group.contact_txt .form-control {
+    color: white; /* Replace with your desired text color */
 }
 
 
