@@ -490,6 +490,7 @@
     .row {
         flex-direction: column-reverse !important;
         align-items: center;
+        height: 100% !important;
     }
 
     .col-md-6 {
@@ -517,8 +518,8 @@
 }
 
 .sec-3 {
-
     margin-top: -80px !important;
+
 }
 
 .card-i-1 {
@@ -563,7 +564,7 @@
 }
 
 .des-slider {
-    height: 100vh;
+    height: 90vh;
 
 }
 
@@ -608,7 +609,7 @@
 
 .card__data {
     width: 250px !important;
-    height: auto;
+    height: 330px;
     /* Allow height to auto-adjust */
     background-color: #341C00;
     padding: 1rem;
@@ -673,6 +674,12 @@
     background-position: fixed;
 
 }
+
+
+
+
+
+
 
 @keyframes show-data {
     50% {
@@ -833,6 +840,8 @@
 
 .sec-4 {
     padding-left: 3.5rem;
+    margin-top: 300px !important;
+   
 }
 
 .sec-4-des {
