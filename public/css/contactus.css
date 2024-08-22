@@ -140,7 +140,7 @@ h4 {
 }
 
 .form-section1 {
-    margin-left: 100px;
+   
 }
 
 .form-control {
@@ -148,7 +148,7 @@ h4 {
 }
 
 .contact_txt {
-    width: 650px;
+    width: 94%;
 }
 
 .form-control:focus {
@@ -156,32 +156,57 @@ h4 {
     outline: none;
 }
 
+.contact_frm button{
+    margin-top: 60px;
+}
 .contact_btn {
-    width: 650px;
+    margin-left: 25px;
+    width: 94%;
     height: 40px;
     text-align: center;
-    margin-left: 100px;
     border-radius: 10px;
     border: none;
-
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
 }
+
 
 .contact_txt1 {
-    width: 280px !important;
+    width: 45.5% !important;
+    
 }
+/* Targeting the placeholder text specifically for the input field within the div */
+.form-group1.contact_txt1 .form-control::placeholder {
+    color: #FFFFFF55; /* Replace with your desired color */
+    opacity: 1; /* Ensure full opacity */
+}
+
 
 /* Base styles for larger screens */
 .form-section {
-    padding: 20px;
+       
 }
 
 .form-section-title {
+    margin-left: 25px;
+    padding-top: 20px;
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #FFFFFF99;
 }
 
+.form-section.form-section1 .form-group.contact_txt .form-control::placeholder {
+    color: #FFFFFF55; /* Replace with your desired color */
+    opacity: 1; /* Ensure full opacity */
+}
+
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
+    padding-top: 0px;
+    margin-left: 25px;
+
 }
 
 .form-control {
@@ -193,13 +218,7 @@ h4 {
     flex-wrap: wrap;
 }
 
-.contact_btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
+
 
 /* Styles for 576px and below */
 @media (max-width: 576px) {
