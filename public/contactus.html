@@ -1,103 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-brand img {
+    width:162px;
+}
+.bg-aboutimg {
+    background-image: url('../images/Rectangle45.png');
+    width: 100%;
+    height: 780px;
+    background-size: cover;
+    margin-top: -180px;
+    display: flex;
+    align-items: center;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/contactus.css">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-
-
-    </style>
-</head>
-
-<body>
-    <div id="header-placeholder"></div>
-    <section>
-        <div class="container-fluid bg-aboutimg">
-            <div class="container ">
-                <div class="about-box ">
-                    <firstButton>Contact Us</firstButton>
-                </div>
-                <h1 style="width: 28%;">
-                    Contact us &
-                    get special
-                    Consultation
-                </h1>
-                <button>
-                    <firstButton> Let's Plan Now</firstButton>
-                </button>
-            </div>
-        </div>
-    </section>
+}
 
 
-    <section style="margin-top: 80px;">
-        <div class="container-fluid ctnrSection2">
-            <div class="container contact_bg">
-                <div class="row ContactUsPage">
-                    <div class="col-lg-4 contact_add">
-                        <p>OFFICE ADDRESS</p>
-                        <h4>214, Sun Orbit, 2nd Floor, Rajpath Rangoli Road, Bodakdev, Ahmedabad 380054, Gujarat, India</h4>
-                        <p style="margin-top: 35px;">OFFICE PHONE NUMBER</p>
-                        <h4>+91 9099253687</h4>
-                        <p style="margin-top: 35px;">EMAIL ADDRESS</p>
-                        <h4>disha@tripcierge.in</h4>
-                    </div>
+.ContactUsPage {
+    margin-top: 40px;
+}
 
-                    <div class="col-lg-8 contact_frm ">
-                        <form action="">
-                            <div class="form-section form-section1 ">
-                                <div class="form-section-title">DROP YOUR QUERY HERE</div>
-                                <div class="form-group contact_txt ">
-                                    <textarea class="form-control" name="additionalInfo" rows="5"
-                                        placeholder="Your message..."></textarea>
-                                </div>
-                            </div>
-                            <div class="form-row d-md-flex mt-2 justify-content-evenly">
-                                <div class="form-group col-md-6 contact_txt1">
-                                    <input type="text" class="form-control form-details" name="firstName"
-                                        placeholder="First Name" required>
-                                </div>
-                                <div class="form-group col-md-6 contact_txt1">
-                                    <input type="email" class="form-control form-details" name="email"
-                                        placeholder="E-Mail ID" required>
-                                </div>
-                            </div>
-                            <button type="submit" class="mt-2 d-flex justify-content-center align-items-center contact_btn">
+.ContactUsPage p {
+    color: black;
+}
 
-                                <span>SEND MEASSGE</span>
+h1 {
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
 
-                            </button>
+.ctnrSection2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 0px !important;
+    width: 100%;
+    height: 100%;
+}
 
-                        </form>
-                    </div>
+.contact_bg {
+    background-color: black;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
 
 
-                </div>
-            </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d117479.15998265317!2d72.55162866796866!3d23.052257150959054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sjio%20mart%20map!5e0!3m2!1sen!2sin!4v1670416973548!5m2!1sen!2sin"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+.contact_add {
+    padding-top: 30px;
+    padding-left: 40px !important;
+    width: 40%;
+    height: 480px;
+    position: relative;
+}
 
-        </div>
-    </section>
+.contact_add::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5px;
+    /* Width of the gradient border */
+    height: 100%;
+    background: linear-gradient(to top, #000000, #f4b40080, #000000);
+    /* Gradient colors */
+}
 
+.container1 p {
+    color: #ffffff99 !important;
+    font-size: 14px;
+    font-weight: 100;
+}
 
+h4 {
+    line-height: 30px;
+    letter-spacing: .5px;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 500;
+    font-size: 20px;
+}
 
-    <div id="footer-placeholder"></div>
-    <script src="../js/header.js"></script>
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+.contact_frm {
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 50px;
+    width: 60%;
+    height: 480px;
+}
 
+.form-section1 {
+    margin-left: 100px;
+}
 
-</body>
+.form-control {
+    background-color: #000000c3 !important;
+}
 
-</html>
+.contact_txt {
+    width: 650px;
+}
+
+.form-control:focus {
+    border-color: #f4b400 !important;
+    outline: none;
+}
+
+.contact_btn {
+    width: 650px;
+    height: 40px;
+    text-align: center;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.contact_txt1 {
+    width: 280px !important;
+}
+
+/* Base styles for larger screens */
+.form-section {
+    padding: 20px;
+}
+
+.form-section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact_btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styles for 576px and below */
+@media (max-width: 576px) {
+    .form-section-title {
+        font-size: 1.2em;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .contact_btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .contact_txt {
+        width:220px ;
+        
+    }
+}
+    /* Styles for 425px and below */
+    @media (max-width: 425px) {
+        .form-section-title {
+            font-size: 1em;
+        }
+
+        .form-row {
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .contact_btn {
+            font-size: 0.8em;
+            padding: 6px 12px;
+        }
+    }
+
+    /* Styles for 320px and below */
+    @media (max-width: 320px) {
+        .form-section-title {
+            font-size: 0.8em;
+        }
+
+        .contact_btn {
+            font-size: 0.7em;
+            padding: 5px 10px;
+        }
+    }
