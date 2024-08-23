@@ -1,28 +1,27 @@
 const express = require('express');
 const path = require('path');
 const emailRouter = require('./api/email');
+require('dotenv').config(); // Load environment variables from .env
 
 const app = express();
 const PORT = process.env.PORT || 9120;
 
-// Serve static files from the 'public' directory
+// Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware to parse JSON and URL-encoded data
+// Middleware to parse incoming JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Route to serve the main page
+// Routes to serve HTML pages
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Route to serve the form page
 app.get('/form.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'form.html'));
+  res.sendFile(path.join(__dirname, 'public', 'form.html'));
 });
 
-// Routes to serve other static pages
 app.get('/destination', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'destination.html'));
 });
@@ -42,6 +41,7 @@ app.get('/blog-us', (req, res) => {
 // Use the email router
 app.use('/send-email', emailRouter);
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
