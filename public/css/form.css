@@ -89,14 +89,16 @@
     }
 
     .dest_head button {
-        height: 50px;
-        width: 180px;
+        height: max-content;
+        width: 160px;
         font-size: 15px;
+        padding: 6px;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        bottom: 180px;
-        left: 28% ;
+        top: 210px !important;
+        left: 48% ;
         color: white;
         border-radius: 25px;
         border: 2px solid #9c9c9c40;
@@ -115,14 +117,16 @@
     }
 
     .dest_head button {
-        height: 50px;
-        width: 180px;
+        height: max-content;
+        width: 160px;
         font-size: 15px;
+        padding: 6px;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        bottom: 180px;
-        left: 28% ;
+        top: 210px !important;
+        left: 48% ;
         color: white;
         border-radius: 25px;
         border: 2px solid #9c9c9c40;
@@ -139,14 +143,16 @@
     }
 
     .dest_head button {
-        height: 50px;
-        width: 180px;
+        height: max-content;
+        width: 160px;
         font-size: 15px;
+        padding: 6px;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        bottom: 180px;
-        left: 28% ;
+        top: 210px !important;
+        left: 48% ;
         color: white;
         border-radius: 25px;
         border: 2px solid #9c9c9c40;
@@ -163,14 +169,16 @@
     }
 
     .dest_head button {
-        height: 50px;
-        width: 180px;
+        height: max-content;
+        width: 160px;
         font-size: 15px;
+        padding: 6px;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        bottom: 180px;
-        left: 28% ;
+        top: 210px !important;
+        left: 48% ;
         color: white;
         border-radius: 25px;
         border: 2px solid #9c9c9c40;
@@ -187,14 +195,16 @@
     }
 
     .dest_head button {
-        height: 50px;
-        width: 180px;
+        height: max-content;
+        width: 160px;
         font-size: 15px;
+        padding: 6px;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        bottom: 180px;
-        left: 28% ;
+        top: 210px !important;
+        left: 48% ;
         color: white;
         border-radius: 25px;
         border: 2px solid #9c9c9c40;
