@@ -1280,6 +1280,9 @@
     .bg-contact1 h1{
         display: none;
     }
+    .G{
+        display: none;
+    }
     .footer{
         display: none !important;
     }
