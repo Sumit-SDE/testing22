@@ -179,10 +179,7 @@
 
 }
 
-.btn.btn-primary {
-    display: none;
 
-}
 
 
 .banner button {
@@ -262,6 +259,33 @@
 /* Responsive adjustments */
 
 @media (max-width: 576px) {
+   
+      
+    .btn.btn-primary {
+        display: block; /* Ensures the button is displayed */
+        right: 30% !important;
+        top: -50px !important;
+        width: max-content;
+        height: max-content;
+        color: white;
+        /* Text color */
+        padding: 10px 20px;
+        /* Button padding */
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+        font-size: 16px;
+        font-weight: 300;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* Smooth transition for background color */
+        backdrop-filter: blur(3px);
+        background-color: transparent;
+        /* Blurs the background */
+       
+      }
+    
+   
+
     .navbar-brand img {
         width: 80px;
     }
@@ -328,7 +352,7 @@
         display: none !important;
     }
 
-
+    
 
 }
 
@@ -638,7 +662,7 @@
     color: #f1f1f1;
 }
 
-.card_article:hover .card_data {
+.card__article:hover .card__data {
     animation: show-data 1s forwards;
     opacity: 1;
     transition: opacity .3s, bottom .3s;
@@ -654,7 +678,7 @@
     animation: show-overflow 2s forwards;
 }
 
-.card_article:not(:hover) .card_data {
+.card__article:not(:hover) .card__data {
     animation: remove-data 1s forwards;
 }
 
@@ -775,11 +799,11 @@
 
     }
 
-    .card_article:hover .card_data {
+    .card__article:hover .card__data {
         opacity: 1;
     }
 
-    .card_article:not(:hover) .card_data {
+    .card__article:not(:hover) .card__data {
         opacity: 1;
     }
 
