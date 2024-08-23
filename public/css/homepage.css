@@ -25,9 +25,9 @@
     align-items: center;
     cursor: pointer; 
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    /* transition: background-color 0.3s ease;
     backdrop-filter: blur(3px); 
-    background-color: #54535350;/* Blurs the background */
+    background-color: #54535350; */
 }
 
 .nav-bg {
@@ -1269,6 +1269,8 @@
     .test_image {
         width: 100px;
         height: 100px;
+        left: 65px;
+    
     }
 
     .testimonial-text {
@@ -1289,6 +1291,13 @@
         max-width: 350px !important;
         height: 400px;
     }
+    .test_image {
+        width: 100px;
+        height: 100px;
+        left: 90px;
+        bottom: 50px;
+    
+    }
 
     .test_image img {
         width: 80px !important;
@@ -1308,6 +1317,9 @@
 
     .test_image {
         top: 80px !important;
+        width: 100px;
+        height: 100px;
+        left: 57px;
     }
 
     .test_image img {
