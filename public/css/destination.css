@@ -586,14 +586,25 @@
         object-fit: cover;
     }
 
-    .desmobile_bg button {
-        width: 78%;
-        height: 58px;
+   .desmobile_bg button {
         margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center ;
-        z-index: 3;
+        height: max-content;
+        width: 175px;
+        color: white;
+        cursor: pointer; 
+        border-radius: 28px !important;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
+    }
+    .desmobile_bg button:hover {
+        backdrop-filter: blur(8px);
+        background-color: #f1f1f120;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+       
     }
 
     .dest_head h1{
@@ -603,11 +614,7 @@
         font-size: 40px;
         width: 300px !important;
     }
-    .desmobile_bg button a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+   
 }
 
 /* For devices with a max width of 375px */
@@ -636,19 +643,25 @@
         
     }
 
-    .desmobile_bg button {
-        width: 86% !important;
-        height: 55px;
-        margin-top: 1px;
-        z-index: 3;
-        padding-top: -0px !important;
+   .desmobile_bg button {
+        margin-top: 10px;
+        height: max-content;
+        width: 175px;
+        color: white;
+        cursor: pointer; 
+        border-radius: 28px !important;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
     }
-       .desmobile_bg button a{
-        font-size: 30px !important;
-        display:  flex;
-        justify-content: center;
-        align-items: center;
-        /* padding-top: -30px !important ; */
+    .desmobile_bg button:hover {
+        backdrop-filter: blur(8px);
+        background-color: #f1f1f120;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
+       
     }
  
 }
@@ -685,21 +698,24 @@
         font-size: 40px;
         width: 300px !important;
     }
-    .desmobile_bg button {
-        width:290px !important;
-        height: 50px;
-        margin-top: 20px;
-        margin-left: -10px !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
+   .desmobile_bg button {
+        margin-top: 10px;
+        height: max-content;
+        width: 175px;
+        color: white;
+        cursor: pointer; 
+        border-radius: 28px !important;
+        border: 2px solid #9c9c9c40;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        backdrop-filter: blur(3px); 
+        background-color: transparent;/* Blurs the background */
     }
-    .desmobile_bg button a{
-        font-size: 18px !important;
-        display:  flex;
-        justify-content: center;
-        align-items: center;
+    .desmobile_bg button:hover {
+        backdrop-filter: blur(8px);
+        background-color: #f1f1f120;
+        color: white;
+        border-radius: 25px;
+        border: 2px solid #9c9c9c40;
        
     }
 }
