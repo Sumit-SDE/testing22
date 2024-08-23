@@ -638,7 +638,7 @@
     color: #f1f1f1;
 }
 
-.card__article:hover .card__data {
+.card_article:hover .card_data {
     animation: show-data 1s forwards;
     opacity: 1;
     transition: opacity .3s, bottom .3s;
@@ -654,7 +654,7 @@
     animation: show-overflow 2s forwards;
 }
 
-.card__article:not(:hover) .card__data {
+.card_article:not(:hover) .card_data {
     animation: remove-data 1s forwards;
 }
 
@@ -775,11 +775,11 @@
 
     }
 
-    .card__article:hover .card__data {
+    .card_article:hover .card_data {
         opacity: 1;
     }
 
-    .card__article:not(:hover) .card__data {
+    .card_article:not(:hover) .card_data {
         opacity: 1;
     }
 
@@ -1161,6 +1161,7 @@
     color: #643600;
     text-align: center;
     padding: 30px 0;
+    
 }
 
 .test_image {
@@ -1168,6 +1169,7 @@
     height: 100px !important;
     position: relative;
     z-index: 999;
+    margin-left: 18.5vw;
     
    
 }
