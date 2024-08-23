@@ -31,7 +31,7 @@
 
 
 /* Destination image styling */
-.dest {}
+/* .dest {} */
 
 .dest img {
     width: 100% !important;
@@ -278,6 +278,7 @@
 
 
 @media (max-width: 576px) {
+  
     .dec_hover:hover .image-container img {
         transform: scale(1);
         transition: transform 0.5s; /* Smooth transition on hover */
@@ -316,7 +317,7 @@
     }
 
     .image-container {
-        width: 100%;
+        width: 80%;
         position: relative;
         display: flex;
         justify-content: center;
@@ -326,9 +327,7 @@
         padding: 10px;
         top: 20px;
         margin-bottom: 50px;
-        border-radius: 38px;
-
-        
+        border-radius: 38px;   
     }
 
     .image-container img {
@@ -356,7 +355,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        z-index: 2; /* Ensure this is higher than the button */
+        z-index: 2;
     }
    
     .title7 {
@@ -467,10 +466,10 @@
 
     .dest_head {
         position: absolute;
-        margin-left: 50px !important;
+        margin-left: 30px !important;
         line-height: 2cm;
         margin-top: 40px;
-        z-index: 3; /* Ensure this is higher than the button */
+        z-index: 3;
         text-align: center;
     }
 
@@ -480,7 +479,7 @@
         font-size: 40px;
         width: 350px !important;
         font-family: khand;
-        margin: 22px auto;
+        margin: 18px auto;
         justify-content: center;
         
         
@@ -507,7 +506,7 @@
         margin-top: 0 !important;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .imagedec0,
     .imagedec1,
     .imagedec2,
@@ -521,22 +520,60 @@
         font-size: 9px;
         /* margin-top: 35%; */
     }
-
+    .desmobile_bg img {
+        width: 100%;
+        height:640px !important;
+        margin-top: -120px;
+        object-fit: cover;
+    }
+    .dest_head {
+        position: absolute;
+        margin-left: 30px !important;
+        line-height: 2cm;
+        margin-top: 4px !important;
+        z-index: 3;
+        text-align: center;
+    }
 
     .des1 {
         font-size: 18px;
         padding: 15px;
     }
 
-    .desmobile_bg img {
-        margin-top: -110px;
-    }
+
 
     .desmobile_bg button {
-        width: 90%;
-        height: 60px;
-        margin-top: 25px;
-        z-index: 3;
+        width: 82%;
+        height: 70px;
+        margin-top: 15px !important;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        border-radius: 100px !important;
+        margin-left: 2% !important;
+        position: fixed;
+        background-color: #ffbb00 !important;
+        padding: 10px;
+        z-index: 1; /* Lower than the title and dest_head */
+    }
+    .desmobile_bg button a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-container {
+        width: 95%!important;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid #00000020;
+        padding: 10px;
+        top: 20px;
+        margin-bottom: 50px;
+        border-radius: 38px;   
     }
 }
 
@@ -552,7 +589,8 @@
     }
 
     .title {
-        font-size: 8px;
+        font-size: 18px;
+        font-weight: bold;
         /* margin-top: 30%; */
     }
 
@@ -563,22 +601,30 @@
 
     .desmobile_bg img {
         margin-top: -105px;
-        /* height: 600px !important; */
+        height: 600px !important;
         object-fit: cover;
     }
 
     .desmobile_bg button {
         width: 78%;
         height: 58px;
-        margin-top: 10px;
+        margin-top: -20px;
         display: flex;
         justify-content: center;
         align-items: center ;
         z-index: 3;
     }
+    .dest_head {
+        position: absolute;
+        margin-left: 40px !important;
+        line-height: 2cm;
+        margin-top: 40px;
+        z-index: 3;
+        text-align: center;
+    }
 
     .dest_head h1{
-        margin-top: 50px !important;
+        margin-top: 20px !important;
         letter-spacing: 2px;
         font-weight: 800 !important;
         font-size: 40px;
@@ -606,7 +652,7 @@
         font-size: 7px;
         /* margin-top: 25%; */
     }
-
+    
     .des1 {
         font-size: 16px;
         padding: 12px;
@@ -657,8 +703,18 @@
 
     .desmobile_bg img {
         margin-top: -120px;
-        height: 600px !important;
+        height: 660px !important;
     }
+   
+    .dest_head {
+        position: absolute;
+        margin-left:15px !important;
+        line-height: 2cm;
+        margin-top: -20px;
+        z-index: 3; /* Ensure this is higher than the button */
+        text-align: center;
+    }
+
     .dest_head h1 {
         margin-top: 50px !important;
         letter-spacing: 2px;
@@ -667,20 +723,32 @@
         width: 300px !important;
     }
     .desmobile_bg button {
-        width:290px !important;
+        width:280px !important;
         height: 50px;
         margin-top: 20px;
-        margin-left: -10px !important;
+        margin-left: 5px !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        padding-top: 12px !important;
     }
     .desmobile_bg button a{
         font-size: 18px !important;
-        display:  flex;
+        
+
+       
+    }
+    .image-container {
+        width: 270px !important;
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
-       
+        flex-direction: column;
+        border: 2px solid #00000020;
+        padding: 10px;
+        top: 20px;
+        margin-bottom: 50px;
+        border-radius: 38px;   
     }
 }
