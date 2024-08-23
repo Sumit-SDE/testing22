@@ -494,7 +494,7 @@
         color: white;
         cursor: pointer; 
        
-        border-radius: 25px;
+        border-radius: 28px !important;
         border: 2px solid #9c9c9c40;
         transition: background-color 0.3s ease; /* Smooth transition for background color */
         backdrop-filter: blur(3px); 
