@@ -130,10 +130,12 @@
 
 
 
+
 .aboutus_decimg img {
     width: 100%;
     padding-right: -5px !important;
     transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
    
 }
 .aboutus_decimg img:hover {
