@@ -68,7 +68,7 @@
 }
 
 .ContactUsPage p {
-    color: black;
+    color: #FFFFFF70;
 }
 
 h1 {
@@ -228,10 +228,18 @@ h4 {
     flex-wrap: wrap;
 }
 
+.dd{
+    height: 200px;
+    background-color: black;
+    color: wheat;
+}
 
 
 /* Styles for 576px and below */
 @media (max-width: 576px) {
+    .form-section1 {
+        
+    }
     .form-section-title {
         font-size: 1.2em;
     }
@@ -243,10 +251,14 @@ h4 {
     .contact_btn {
         font-size: 0.9em;
         padding: 8px 16px;
+        width:90% ;
     }
-
+    .contact_txt1 {
+        width:42.6% !important;
+        
+    }
     .contact_txt {
-        width:220px ;
+        width:90% ;
         
     }
 }
