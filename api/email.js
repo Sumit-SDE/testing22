@@ -1,32 +1,35 @@
 const express = require('express');
-const router = express.Router();
 const nodemailer = require('nodemailer');
-require('dotenv').config(); // Ensure you have the 'dotenv' package installed
+const router = express.Router();
+require('dotenv').config(); // Load environment variables
 
+// Setup the email transporter using Gmail and environment variables
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'savaliyaabhi912@gmail.com',
-        pass: 'lrrd dtfd verk fdbn'
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS
     }
 });
 
+// Define the route to handle email submissions
 router.post('/', (req, res) => {
     const { firstName, lastName, phone, email, destination, days, nights, adults, children, budget, additionalInfo } = req.body;
 
-    console.log('Form data received:', req.body);
-
+    // Validate required fields
     if (!firstName || !lastName || !phone || !email || !destination) {
         return res.status(400).send('All fields are required');
     }
 
+    // Setup email options
     const mailOptions = {
-        from: email,
-        to: 'abhisavaliya143@gmail.com', // Set recipient email directly
+        from: process.env.GMAIL_USER,
+        to: 'abhisavaliya143@gmail.com', 
         subject: 'Travel Inquiry',
         text: `Name: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\nDestination: ${destination}\nDays: ${days}\nNights: ${nights}\nAdults: ${adults}\nChildren: ${children}\nBudget: ${budget}\nAdditional Information: ${additionalInfo}`
     };
-    
+
+    // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error sending email:', error);
