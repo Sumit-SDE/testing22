@@ -20,9 +20,8 @@
 .about-box {
     margin-bottom: 24px;
     height: 50px;
-    width: 250px;
+    width: 170px;
     color: white;
-    padding-top: 5px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -43,9 +42,8 @@
 .planNowBox {
     margin-top: 24px;
     height: 50px;
-    width: 250px;
+    width: 180px;
     color: white;
-    padding-top: 5px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -231,12 +229,19 @@ h4 {
 .dd{
     height: 200px;
     background-color: black;
-    color: wheat;
+    color: white
 }
 
 
 /* Styles for 576px and below */
 @media (max-width: 576px) {
+    .container h1{
+        width: 270px !important;
+    }
+    .about-box {
+        display: none;
+    }
+    
     .form-section1 {
         
     }
@@ -255,6 +260,7 @@ h4 {
     }
     .contact_txt1 {
         width:42.6% !important;
+        padding-left: 6px;
         
     }
     .contact_txt {
@@ -280,6 +286,21 @@ h4 {
             font-size: 0.8em;
             padding: 6px 12px;
         }
+        .contact_btn {
+            font-size: 0.9em;
+            padding: 8px 16px;
+            width:90% ;
+        }
+        .contact_txt1 {
+            width:90% !important;
+            margin-left: 7% !important;
+            
+            
+        }
+        .contact_txt {
+            width:90% ;
+            
+        }
     }
 
     /* Styles for 320px and below */
@@ -291,5 +312,17 @@ h4 {
         .contact_btn {
             font-size: 0.7em;
             padding: 5px 10px;
+        }
+
+       
+        .contact_txt1 {
+            width:90% !important;
+            margin-left: 7% !important;
+            
+            
+        }
+        .contact_txt {
+            width:90% ;
+            
         }
     }
