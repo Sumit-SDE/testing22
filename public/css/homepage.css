@@ -125,7 +125,7 @@
 }
 
 .carousel-caption h1 {
-    font-size: 220px;
+    font-size: 150px !important;
     margin-top: -220px;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
@@ -141,23 +141,7 @@
     /* For Firefox support */
 }
 
-.carousel-caption h2 {
-    margin-left: -135px !important;
-    font-size: 185px;
-    margin-top: -220px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    background: linear-gradient(to bottom, white, transparent);
-    /* Define your gradient colors */
-    -webkit-background-clip: text;
-    /* Clip the background to the text */
-    -webkit-text-fill-color: transparent;
-    /* Make the text color transparent */
-    background-clip: text;
-    /* For Firefox support */
-    text-fill-color: transparent;
-    /* For Firefox support */
-}
+
 
 .carousel-caption button {
     border-radius: 30px;
@@ -312,21 +296,17 @@
 
     .carousel-caption h1 {
         background-color: white !important;
-        font-size: 80px;
+        font-size: 50px !important;
         /* margin-top: 50px !important; */
     }
 
-    .carousel-caption h2 {
-        background-color: white !important;
-        font-size: 55px !important;
-        /* margin-top: 50px !important; */
-    }
+   
 
     .carousel-caption p {
         width: 99% !important;
         letter-spacing: 2px;
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 12px !important;
     }
 
     .carousel-caption button {
@@ -1188,6 +1168,8 @@
     height: 100px !important;
     position: relative;
     z-index: 999;
+    
+   
 }
 
 .test_image img {
@@ -1197,6 +1179,7 @@
     object-fit: cover !important;
     display: flex;
     border-radius: 50%;
+   
 }
 
 .testimonial-text {
