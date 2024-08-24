@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
             return res.status(500).send(`Internal Server Error: ${error.message}`);
         } else {
             console.log('Email sent:', info.response);
-            res.redirect('/');
+            res.redirect('https://tripcierge.in/');
         }
     });
 });
