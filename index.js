@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes to serve HTML pages
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
-});
+},()=>{console.log("index called")});
 
 app.get('/form.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'form.html'));
