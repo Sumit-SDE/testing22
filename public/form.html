@@ -202,11 +202,21 @@
                             </button>
                         </div> -->
                         
-                        <script>
+                       
+                        <!-- ahiya sudhi nu -->
+                  
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+     <script>
                             document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
   const formData = new FormData(this);
-  fetch('https://tripcierge.in/send-email', {
+  fetch('/send-email', {
     method: 'POST',
     body: formData,
   }).then(response => {
@@ -225,15 +235,6 @@
                                 window.location.href = "emailsent.html";
                             }
                         </script>
-                        <!-- ahiya sudhi nu -->
-                  
-                    
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <div id="footer-placeholder"></div>
     <script src="../js/header.js"></script>
     <script src="./js/loadContent.js"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
