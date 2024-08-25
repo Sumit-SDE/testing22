@@ -203,6 +203,24 @@
                         </div> -->
                         
                         <script>
+                            document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+  const formData = new FormData(this);
+  fetch('/send-email', {
+    method: 'POST',
+    body: formData,
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = 'emailsent.html';
+    } else {
+      alert('There was an error sending your email. Please try again.');
+    }
+  }).catch(error => {
+    console.error('Error:', error);
+    alert('There was an error sending your email. Please try again.');
+  });
+});
+
                             function redirectToEmailSent() {
                                 window.location.href = "emailsent.html";
                             }
